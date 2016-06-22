@@ -49,8 +49,12 @@ namespace Poa
             app.UseApplicationInsightsRequestTelemetry();
 
             app.UseApplicationInsightsExceptionTelemetry();
+		
 
-            app.UseMvc();
+			// Configure the HTTP request pipeline.
+			app.UseStaticFiles();
+
+			app.UseMvc();
         }
     }
 }
